@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section1-2</title>
+</head>
+<body>
+  <form>
+    <input type="text" value="0" id="number">
+    <input type="button" value="increase" id="button">
+  </form>
+
+  <script>
+    // 콜백함수 수행 
+    function increaseNumber() {
+      let value = parseInt(document.getElementById('number').value);
+      value++;
+      document.getElementById('number').value = value;
+    }
+
+    document.getElementById('button').addEventListener('click', increaseNumber);
+
+    // 브라우저는 HTML 코드를 파싱 후 내부에 DOM을 생성, 이후 JS엔진에게 스크립트 실행 요구
+    // JS엔진은 이벤트 loop에서 이벤트 발생을 기다리다가 이벤트 발생 시, 이벤트 큐에 이벤트를 넣고, 이벤트 루프는 이벤트 큐에 이벤트가 있는지 확인 후 하나씩 처리
+    // JS는 콜백으로 이벤트를 처리합니다.
+
+  </script>
+</body>
+</html>
